@@ -18,7 +18,8 @@ One file, complete SQL journey: `Genesis_Query_Protocol.sql`
 | Protocol 3 | ORDER BY, LIMIT, Aliases | ✅ Done |
 | Protocol 4 | INNER JOIN, LEFT JOIN | ✅ Done |
 | Protocol 5 | GROUP BY, HAVING, Aggregate Functions | ✅ Done |
-| **Protocol 9** | **Schema Design, Subqueries, Foreign Keys, HackerRank** | **✅ Done** |
+| Protocol 9 | Schema Design, Subqueries, Foreign Keys, HackerRank | ✅ Done |
+| **Protocol 10** | **Window Functions - ROW_NUMBER, RANK, PARTITION BY** | **✅ Done** |
 
 ### **Protocol 9 Breakdown:**
 - **DDL**: `CREATE TABLE` with `PRIMARY KEY` + `FOREIGN KEY`
@@ -26,14 +27,24 @@ One file, complete SQL journey: `Genesis_Query_Protocol.sql`
 - **DQL**: Complex `SELECT` with `JOIN`, `MAX()` Subquery, `AVG()`, `GROUP BY`, `WHERE`
 - **Achievement**: HackerRank SQL (Basic) Certified
 
+### **Protocol 10 Breakdown:**
+- **Core Concepts**: `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `OVER()`, `PARTITION BY`, `ORDER BY`
+- **Use Cases Solved**: 
+    1.  Top N per Category - Highest salary in each department
+    2.  Running Totals & Moving Averages
+    3.  Ranking employees without skipping ranks
+    4.  Difference from GROUP BY - Row-level detail ठेवून Aggregation
+- **Key Learning**: `GROUP BY` collapses rows, `Window Function` keeps all rows + adds calculation
+- **Platform**: HackerRank + MySQL Practice
+
 **Database:** MySQL  
 **Platform:** HackerRank + GitHub
 
 ---
 
 ## 🎯 Upcoming SQL Protocols:
-- Protocol 10: Window Functions - ROW_NUMBER, RANK, PARTITION BY
 - Protocol 11: CTEs and Recursive Queries  
 - Protocol 12: Stored Procedures & Triggers
+- Protocol 13: Performance Tuning & Indexing
 
 *Building SQL muscle. One Query at a time.* ⚔️
