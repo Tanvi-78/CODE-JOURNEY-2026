@@ -155,4 +155,33 @@ WHERE rn = 1;
 
 -- End of Protocol 10
 -- ============================================
--
+--- Protocol 11: Recursive CTE for Employee Hierarchy
+-- DAY 5
+ 
+
+CREATE TABLE Employees (
+  employee_id INT PRIMARY KEY,
+  name VARCHAR(50),
+  manager_id INT
+);
+
+INSERT INTO Employees VALUES
+(1, 'CEO Raj', NULL),
+(2, 'CTO Priya', 1),
+(3, 'Dev Ankit', 2),
+(4, 'Dev Tanvi', 2);
+
+WITH RECURSIVE EmployeeHierarchy AS (
+    SELECT employee_id, name, manager_id, 1 AS level
+    FROM Employees 
+    WHERE manager_id IS NULL
+    
+    UNION ALL
+    
+    SELECT e.employee_id, e.name, e.manager_id, eh.level + 1
+    FROM Employees e
+    INNER JOIN EmployeeHierarchy eh ON e.manager_id = eh.employee_id
+)
+SELECT * FROM EmployeeHierarchy ORDER BY level, name;
+
+-- ============================================
