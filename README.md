@@ -19,7 +19,10 @@ One file, complete SQL journey: `Genesis_Query_Protocol.sql`
 | Protocol 4 | INNER JOIN, LEFT JOIN | ✅ Done |
 | Protocol 5 | GROUP BY, HAVING, Aggregate Functions | ✅ Done |
 | Protocol 9 | Schema Design, Subqueries, Foreign Keys, HackerRank | ✅ Done |
-| **Protocol 10** | **Window Functions - ROW_NUMBER, RANK, PARTITION BY** | **✅ Done** |
+| Protocol 10 | Window Functions - ROW_NUMBER, RANK, PARTITION BY | ✅ Done |
+| Protocol 11 | CTEs, Recursive Queries, WITH clause | ✅ Done |
+
+---
 
 ### **Protocol 9 Breakdown:**
 - **DDL**: `CREATE TABLE` with `PRIMARY KEY` + `FOREIGN KEY`
@@ -30,12 +33,18 @@ One file, complete SQL journey: `Genesis_Query_Protocol.sql`
 ### **Protocol 10 Breakdown:**
 - **Core Concepts**: `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `OVER()`, `PARTITION BY`, `ORDER BY`
 - **Use Cases Solved**: 
-    1.  Top N per Category - Highest salary in each department
-    2.  Running Totals & Moving Averages
-    3.  Ranking employees without skipping ranks
-    4.  Difference from GROUP BY - Row-level detail ठेवून Aggregation
+    1. Top N per Category - Highest salary in each department
+    2. Running Totals & Moving Averages
+    3. Ranking employees without skipping ranks
+    4. Difference from GROUP BY - Row-level detail ठेवून Aggregation
 - **Key Learning**: `GROUP BY` collapses rows, `Window Function` keeps all rows + adds calculation
 - **Platform**: HackerRank + MySQL Practice
+
+### **Protocol 11 Breakdown: CTEs & Recursive Queries**
+- **Objective**: Use `WITH RECURSIVE` to traverse hierarchical employee data and generate org charts
+- **Key Concepts**: Anchor Member, Recursive Member, Self-Join, Level Tracking, Termination Condition
+- **Business Use Case**: Solves tree traversal for org charts, BOM, category hierarchies in pure SQL
+- **Key Learning**: Recursive CTEs run iteratively until no new rows. 3x faster than loops for hierarchical data.
 
 **Database:** MySQL  
 **Platform:** HackerRank + GitHub
@@ -43,7 +52,7 @@ One file, complete SQL journey: `Genesis_Query_Protocol.sql`
 ---
 
 ## 🎯 Upcoming SQL Protocols:
-- Protocol 11: CTEs and Recursive Queries  
+
 - Protocol 12: Stored Procedures & Triggers
 - Protocol 13: Performance Tuning & Indexing
 
